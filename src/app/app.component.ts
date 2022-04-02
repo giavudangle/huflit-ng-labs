@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'angular-complete';
 
   loadedFeature = 'recipe';
-
+  
   onNavigate(feature: string) {
     this.loadedFeature = feature;
   }
