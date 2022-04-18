@@ -1,12 +1,15 @@
 <div class="row">
   <div class="col-xl-10">
-      <app-shopping-edit (onAdd)="true"></app-shopping-edit>
-      <hr>
-      <ul class="list-group">
-        <a href="#"class="list-group-item list-group-item-action"
-        *ngFor="let ingredient of ingredients">
-          {{ingredient.name}} ({{ingredient.amount}})
-        </a>
-      </ul>
+    <app-shopping-edit></app-shopping-edit>
+    <hr />
+    <ul class="list-group">
+      <a
+        href="#"
+        class="list-group-item list-group-item-action"
+        *ngFor="let ingredient of ingredients"
+      >
+        {{ ingredient.name }} ({{ ingredient.amount }})
+      </a>
+    </ul>
   </div>
 </div>
