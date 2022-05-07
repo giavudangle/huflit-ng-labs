@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-complete'`, () => {
+  it(`should have as title 'ng-complete'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-complete');
+    expect(app.title).toEqual('ng-complete');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-complete app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('ng-complete app is running!');
   });
 });

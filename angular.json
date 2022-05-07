@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-complete": {
+    "ng-complete": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-complete",
+            "outputPath": "dist/ng-complete",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -30,7 +30,10 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -69,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-complete:build:production"
+              "browserTarget": "ng-complete:build:production"
             },
             "development": {
-              "browserTarget": "angular-complete:build:development"
+              "browserTarget": "ng-complete:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-complete:build"
+            "browserTarget": "ng-complete:build"
           }
         },
         "test": {
@@ -103,5 +106,5 @@
       }
     }
   },
-  "defaultProject": "angular-complete"
+  "defaultProject": "ng-complete"
 }

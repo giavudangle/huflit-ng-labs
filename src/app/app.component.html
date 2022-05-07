@@ -5,5 +5,18 @@
       <router-outlet></router-outlet>
     </div>
   </div>
-</div>
 
+  <div>
+    <input style="margin-top: 20px" type="text" [(ngModel)]="username" />
+    <p>{{ username }}</p>
+  </div>
+  <div>
+    <button
+      style="margin-bottom: 20px"
+      [disabled]="username === ''"
+      (click)="DoReset()"
+    >
+      OK
+    </button>
+  </div>
+</div>
